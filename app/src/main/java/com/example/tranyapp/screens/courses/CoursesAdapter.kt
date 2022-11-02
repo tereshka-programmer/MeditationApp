@@ -14,6 +14,10 @@ class CoursesAdapter(
 ) : RecyclerView.Adapter<CoursesAdapter.CoursesAdapterViewHolder>() {
 
     var listOfCourses: List<Course> = emptyList()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoursesAdapterViewHolder {

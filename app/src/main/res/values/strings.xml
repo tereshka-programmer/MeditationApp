@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TranyApp</string>
+    <string name="courses">Courses</string>
+    <string name="meditations">Meditations</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/courses_graph"
+    app:startDestination="@id/coursesFragment">
+
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="com.example.tranyapp.screens.courses.CoursesFragment"
+        android:label="fragment_courses"
+        tools:layout="@layout/fragment_courses" >
+        <action
+            android:id="@+id/action_coursesFragment_to_coursesDetailFragment"
+            app:destination="@id/coursesDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coursesDetailFragment"
+        android:name="com.example.tranyapp.screens.courses.CoursesDetailFragment"
+        android:label="fragment_courses_detail"
+        tools:layout="@layout/fragment_courses_detail" />
+</navigation>

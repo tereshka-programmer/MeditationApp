@@ -3,6 +3,7 @@ package com.example.tranyapp.screens.courses
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tranyapp.App
@@ -25,7 +26,12 @@ class CoursesFragment : Fragment(R.layout.fragment_courses) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentCoursesBinding.bind(view)
 
-        adapter = CoursesAdapter()
+        adapter = CoursesAdapter(object : userActionListener {
+            override fun toNavigate(titile: String) {
+                navigateToCoursesDetail(titile)
+            }
+
+        })
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         binding.coursesRecyclerView.adapter = adapter
@@ -34,6 +40,11 @@ class CoursesFragment : Fragment(R.layout.fragment_courses) {
         viewModel.course.observe(viewLifecycleOwner) {
             adapter.listOfCourses = it
         }
+    }
+
+    fun navigateToCoursesDetail(title: String) {
+        val direction = CoursesFragmentDirections.actionCoursesFragmentToCoursesDetailFragment(title)
+        findNavController().navigate(direction)
     }
 
 }

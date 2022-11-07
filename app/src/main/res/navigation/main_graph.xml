@@ -18,5 +18,9 @@
         android:id="@+id/meditationRunnableFragment"
         android:name="com.example.tranyapp.screens.meditations.MeditationRunnableFragment"
         android:label="fragment_meditation_runnable"
-        tools:layout="@layout/fragment_meditation_runnable" />
+        tools:layout="@layout/fragment_meditation_runnable" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
 </navigation>

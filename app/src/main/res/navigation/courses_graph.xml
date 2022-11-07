@@ -18,5 +18,9 @@
         android:id="@+id/coursesDetailFragment"
         android:name="com.example.tranyapp.screens.courses.CoursesDetailFragment"
         android:label="fragment_courses_detail"
-        tools:layout="@layout/fragment_courses_detail" />
+        tools:layout="@layout/fragment_courses_detail" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
 </navigation>

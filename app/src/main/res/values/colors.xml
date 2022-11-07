@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray_back">#252525</color>
     <color name="gray_back_card">#2C2C2C</color>
+    <color name="gray_back_card_pressed">#505050</color>
     <color name="text_color">#FFA3A3A3</color>
 </resources>

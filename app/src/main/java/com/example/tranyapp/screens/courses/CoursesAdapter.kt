@@ -9,9 +9,13 @@ import com.example.tranyapp.R
 import com.example.tranyapp.databinding.ItemCourseBinding
 import com.example.tranyapp.model.courses.entities.Course
 
-class CoursesAdapter(
+interface userActionListener {
+    fun toNavigate(titile: String)
+}
 
-) : RecyclerView.Adapter<CoursesAdapter.CoursesAdapterViewHolder>() {
+class CoursesAdapter(
+    private val actionListener: userActionListener
+) : RecyclerView.Adapter<CoursesAdapter.CoursesAdapterViewHolder>(), View.OnClickListener {
 
     var listOfCourses: List<Course> = emptyList()
         set(value) {
@@ -24,14 +28,16 @@ class CoursesAdapter(
         val inflater = LayoutInflater.from(parent.context)
         val binding = ItemCourseBinding.inflate(inflater, parent, false)
 
+        binding.root.setOnClickListener(this)
+
         return CoursesAdapterViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: CoursesAdapterViewHolder, position: Int) {
         val course = listOfCourses[position]
-
+        holder.itemView.tag = course
         with(holder.binding) {
-            holder.itemView.tag = course
+
 
             titleCourse.text = course.title
             if (course.image.isNotBlank()) {
@@ -49,5 +55,10 @@ class CoursesAdapter(
     class CoursesAdapterViewHolder(
         val binding: ItemCourseBinding
     ) : RecyclerView.ViewHolder(binding.root)
+
+    override fun onClick(view: View?) {
+        val course = view?.tag as Course
+        actionListener.toNavigate(course.title)
+    }
 
 }

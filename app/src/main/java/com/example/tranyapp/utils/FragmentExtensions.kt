@@ -1,4 +1,12 @@
 package com.example.tranyapp.utils
 
-class FragmentExtensions {
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import com.example.tranyapp.R
+
+fun Fragment.findTopNavController(): NavController {
+    val topLevelHost = requireActivity().supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment?
+    return topLevelHost?.navController ?: findNavController()
 }

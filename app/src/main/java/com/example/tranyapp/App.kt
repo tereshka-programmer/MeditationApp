@@ -16,5 +16,4 @@ object App {
     val meditationsRepository = InMemoryMeditationsRepository()
     val coursesRepository = InMemoryCoursesRepository(meditationsRepository, scope)
 
-
 }

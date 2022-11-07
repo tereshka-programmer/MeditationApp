@@ -4,13 +4,11 @@ import androidx.lifecycle.Lifecycle
 import com.example.tranyapp.model.courses.entities.Course
 import com.example.tranyapp.model.meditations.InMemoryMeditationsRepository
 import com.github.javafaker.Faker
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.launch
 
 class InMemoryCoursesRepository(
     meditationsRepository: InMemoryMeditationsRepository,
@@ -34,35 +32,20 @@ class InMemoryCoursesRepository(
                         counter++
                         Course(
                             title = faker.book().title(),
-                            description = faker.book().genre(),
+                            description = faker.harryPotter().quote(),
                             image = it,
                             value = meditations.chunked(images.size)[counter]
                         )
                     }
             }
         }
-
-//        var counter = -1
-//
-//        currentCoursesFlow = meditationsRepository.getAllMeditations().map { meditations ->
-//            images.map {
-//                counter++
-//                Course(
-//                    title = faker.book().title(),
-//                    description = faker.book().genre(),
-//                    image = it,
-//                    value = meditations.chunked(images.size)[counter]
-//                )
-//
-//            }
-//        } as MutableStateFlow<List<Course>>
     }
 
 
     override fun getAllCourses(): Flow<List<Course>> = currentCoursesFlow
 
-    override suspend fun getCourse(title: String): Course {
-        return currentCoursesFlow.value.first { it.title == title }
+    override suspend fun getCourse(title: String): Course = withContext(Dispatchers.IO) {
+        return@withContext currentCoursesFlow.value.first { it.title == title }
     }
 
     companion object {

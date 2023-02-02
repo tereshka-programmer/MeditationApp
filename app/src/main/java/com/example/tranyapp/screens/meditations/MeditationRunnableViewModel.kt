@@ -9,6 +9,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.tranyapp.model.meditations.InMemoryMeditationsRepository
+import com.example.tranyapp.model.meditations.MeditationsRepository
 import com.example.tranyapp.model.meditations.entities.Meditation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -18,7 +19,7 @@ import java.lang.Exception
 
 class MeditationRunnableViewModel(
     title: String,
-    inMemoryMeditationsRepository: InMemoryMeditationsRepository
+    inMemoryMeditationsRepository: MeditationsRepository
 ) : ViewModel() {
 
     private val _meditationRunnable = MutableLiveData<Meditation>()

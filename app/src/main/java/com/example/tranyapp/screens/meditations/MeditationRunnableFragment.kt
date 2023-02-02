@@ -3,6 +3,7 @@ package com.example.tranyapp.screens.meditations
 import android.media.AsyncPlayer
 import android.media.AudioAttributes
 import android.media.MediaPlayer
+import android.opengl.Visibility
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -17,6 +18,7 @@ import com.bumptech.glide.Glide
 import com.example.tranyapp.App
 import com.example.tranyapp.R
 import com.example.tranyapp.databinding.FragmentMeditationRunnableBinding
+import com.example.tranyapp.model.songs.InMemorySongRepository
 import com.example.tranyapp.utils.findTopNavController
 import com.example.tranyapp.utils.viewModelCreator
 import kotlinx.coroutines.*

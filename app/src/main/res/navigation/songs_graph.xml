@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/songs_graph"
+    app:startDestination="@id/songFragment">
+
+    <fragment
+        android:id="@+id/songFragment"
+        android:name="com.example.tranyapp.screens.songs.SongFragment"
+        android:label="fragment_songs"
+        tools:layout="@layout/fragment_songs" />
+</navigation>

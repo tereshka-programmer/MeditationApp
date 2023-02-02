@@ -9,4 +9,8 @@
         android:title="@string/meditations"
         android:icon="@drawable/ic_meditations" />
 
+    <item android:id="@id/songs_graph"
+        android:title="@string/songs"
+        android:icon="@drawable/ic_songs"/>
+
 </menu>

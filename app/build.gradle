@@ -57,4 +57,16 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.0-alpha03'
 
     implementation 'androidx.fragment:fragment-ktx:1.5.4'
+
+    def lifecycle_version = '2.3.1'
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    // ExoPlayer 2.18.2
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.2'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.2'
+
 }

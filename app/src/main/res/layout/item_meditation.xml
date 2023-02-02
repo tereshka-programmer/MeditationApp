@@ -17,6 +17,7 @@
         android:src="@drawable/forest"
         android:layout_margin="6dp"/>
 
+
     <TextView
         android:id="@+id/tvMeditation"
         android:layout_width="match_parent"

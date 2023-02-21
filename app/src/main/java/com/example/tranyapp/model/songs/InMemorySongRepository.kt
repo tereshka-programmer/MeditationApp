@@ -26,6 +26,8 @@ class InMemorySongRepository() {
 
     fun getSongs(): List<Song> = listOfSongs
 
+    fun getSongByPosition(position: Int) = listOfSongs[position]
+
     private fun getAllSongs(context: Context): List<Song> {
         return songs(makeSongCursor(context))
     }

@@ -27,6 +27,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name=".receivers.NotificationActionBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="action previous" />
+                <action android:name="action play pause" />
+                <action android:name="action next" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

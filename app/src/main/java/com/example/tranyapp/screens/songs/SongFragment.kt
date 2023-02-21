@@ -9,6 +9,7 @@ import com.example.tranyapp.App
 import com.example.tranyapp.R
 import com.example.tranyapp.databinding.FragmentSongsBinding
 import com.example.tranyapp.model.songs.InMemorySongRepository
+import com.example.tranyapp.services.ACTION_NEXT
 import com.example.tranyapp.services.PlayerService
 import com.example.tranyapp.utils.PlayerRemote
 import com.example.tranyapp.utils.viewModelCreator
@@ -38,9 +39,6 @@ class SongFragment : Fragment(R.layout.fragment_songs) {
         viewModel.songs.observe(viewLifecycleOwner) {
             adapter.updateSongList(it)
         }
-
-
-
     }
 
 
@@ -53,9 +51,5 @@ class SongFragment : Fragment(R.layout.fragment_songs) {
         binding.songsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
 
-//    private fun initExoPlayer() {
-//        exoPlayer = ExoPlayer.Builder(requireContext()).build()
-//
-//    }
 
 }

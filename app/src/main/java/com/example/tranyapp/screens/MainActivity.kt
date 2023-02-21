@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         override fun onServiceConnected(className: ComponentName?, service: IBinder?) {
             val binder: PlayerService.MusicBinder = service as PlayerService.MusicBinder
             PlayerRemote.playerService = binder.getService()
-            PlayerRemote.playerService?.runAction(MusicState.PLAY)
             PlayerRemote.mBound = true
         }
 
@@ -97,7 +96,7 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         supportFragmentManager.unregisterFragmentLifecycleCallbacks(fragmentListener)
         navController = null
-        unbindMusicService()
+//        unbindMusicService()
     }
 
     override fun onRequestPermissionsResult(

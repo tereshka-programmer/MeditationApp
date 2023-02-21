@@ -26,16 +26,13 @@ interface PlayerListener {
 class SongAdapter(
     val context: Context,
     private var songList: MutableList<Song>,
-    private val playerListener: PlayerListener
-) : RecyclerView.Adapter<SongAdapter.ViewHolderSong>(){
-
+    private val playerListener: PlayerListener,
+) : RecyclerView.Adapter<SongAdapter.ViewHolderSong>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderSong {
         val layoutInflater = LayoutInflater.from(parent.context)
         val binding = ItemSongBinding.inflate(layoutInflater, parent, false)
-
-
         return ViewHolderSong(binding)
     }
 
@@ -85,7 +82,7 @@ class SongAdapter(
     }
 
     class ViewHolderSong(
-        val binding: ItemSongBinding
+        val binding: ItemSongBinding,
     ) : RecyclerView.ViewHolder(binding.root)
 
 

@@ -13,4 +13,8 @@
         android:title="@string/songs"
         android:icon="@drawable/ic_songs"/>
 
+    <item android:id="@id/player_graph"
+        android:title="@string/player"
+        android:icon="@drawable/ic_player"/>
+
 </menu>

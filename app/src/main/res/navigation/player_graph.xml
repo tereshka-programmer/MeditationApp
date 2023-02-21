@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/player_graph"
+    app:startDestination="@id/songRunnableFragment">
+    <fragment
+        android:id="@+id/songRunnableFragment"
+        android:name="com.example.tranyapp.screens.player.SongRunnableFragment"
+        android:label="song_runnable"
+        tools:layout="@layout/song_runnable" />
+</navigation>

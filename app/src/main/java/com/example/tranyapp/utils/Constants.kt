@@ -3,7 +3,9 @@ package com.example.tranyapp.utils
 import android.provider.MediaStore
 
 object Constants {
-
+    const val NOTIFICATION_CHANNEL_ID = "notificationIdChannel"
+    const val NOTIFICATION_CHANNEL_NAME = "notificationChannelName"
+    const val NOTIFICATION_ID = 1
 
     val baseProjection = arrayOf(
         MediaStore.Audio.AudioColumns.TITLE,

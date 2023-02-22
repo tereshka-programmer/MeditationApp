@@ -1,6 +1,6 @@
-<h1 align="center">Meditation App + Offline music player
+<h1 align="center">Meditation App + Offline music player<h1>
 
-<h2>Stack:
+<h2>Stack:<h2>
   
 ```
 - Android SDK

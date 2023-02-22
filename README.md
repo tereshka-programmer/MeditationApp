@@ -2,7 +2,6 @@
 
 <h2>Stack:<h2>
   
-```
 - Android SDK
 - Kotlin Coroutines
 - Flow
@@ -17,7 +16,6 @@
 - SafeArgs
 - JUnit
   
-```
 
 <h2>Scrrenshots:
   

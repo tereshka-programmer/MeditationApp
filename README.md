@@ -1,4 +1,4 @@
-<h1 align="center">Meditation App + Player of current songs
+<h1 align="center">Meditation App + Offline music player
 
 <h2>Stack:
   - Android SDK

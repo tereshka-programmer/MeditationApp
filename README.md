@@ -1,19 +1,19 @@
 <h1 align="center">Meditation App + Offline music player
 
 <h2>Stack:
-<h3> - Android SDK
-  - Kotlin Coroutines
-  - Flow
-  - ExoPlayer
-  - MediaPlayer
-  - MVVM
-  - Glide
-  - Service
-  - BroadCast Receiver 
-  - Single Activity
-  - Navigation Component
-  - SafeArgs
-  - JUnit
+* Android SDK
+* Kotlin Coroutines
+* Flow
+* ExoPlayer
+* MediaPlayer
+* MVVM
+* Glide
+* Service
+* BroadCast Receiver 
+* Single Activity
+* Navigation Component
+* SafeArgs
+* JUnit
 
 <h2>Scrrenshots:
   

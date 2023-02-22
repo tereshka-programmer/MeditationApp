@@ -1,6 +1,8 @@
 <h1 align="center">Meditation App + Offline music player
 
 <h2>Stack:
+  
+```
 * Android SDK
 * Kotlin Coroutines
 * Flow
@@ -14,6 +16,8 @@
 * Navigation Component
 * SafeArgs
 * JUnit
+  
+```
 
 <h2>Scrrenshots:
   

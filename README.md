@@ -3,10 +3,10 @@
 <h2>Stack:
   
 ```
-* Android SDK
-* Kotlin Coroutines
-* Flow
-* ExoPlayer
+  + Android SDK
++ Kotlin Coroutines
+- Flow
+*ExoPlayer
 * MediaPlayer
 * MVVM
 * Glide

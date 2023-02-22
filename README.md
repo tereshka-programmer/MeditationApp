@@ -19,7 +19,7 @@
 
 <h2>Scrrenshots:<h2>
   
-  <h3> Screen of available courses page - - Screen of course details page - - Screen of meditations<h3>
+  <h3> Screen of available courses page - Screen of course details page - - - Screen of meditations<h3>
   <img src="https://user-images.githubusercontent.com/79253805/220618360-1f233dbf-b156-45f5-be0e-2e978b182246.png" width=30% height=30%> 
   <img src="https://user-images.githubusercontent.com/79253805/220618395-a521e2d0-2a18-41fd-b17e-440985dd0936.png" width=30% height=30%>
   <img src="https://user-images.githubusercontent.com/79253805/220618487-0197e90a-cfe4-46ea-b356-f90801ed78ee.png" width=30% height=30%>
